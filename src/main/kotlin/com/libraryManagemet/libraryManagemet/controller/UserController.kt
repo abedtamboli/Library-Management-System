@@ -57,7 +57,7 @@ class UserController (
     @GetMapping("/{num}/{status}")
     fun getUserPage(@PathVariable status: Boolean, @PathVariable num : Int) : ResponseEntity<Page<User>>{
         return try{
-            val page = userServices.getUserPage( status, num);
+            val page = userServices.getUserPage( status, num)
             ResponseEntity.of(Optional.of(page))
         }
         catch (e: Exception) {

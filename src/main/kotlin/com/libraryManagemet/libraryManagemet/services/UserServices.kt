@@ -16,7 +16,7 @@ class UserServices (
 
     fun addUser(user: User): User = userRepo.save(user)
 
-    fun getUserPage(status: Boolean,page: Int) : Page<User> = userRepo.findByStatus(status, PageRequest.of(page, 7));
+    fun getUserPage(status: Boolean,page: Int) : Page<User> = userRepo.findByStatus(status, PageRequest.of(page, 7))
 
     fun getUserList(status: Boolean) : List<User> = userRepo.findByStatus(status)
 
